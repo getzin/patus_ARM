@@ -1,0 +1,11 @@
+# Note on usage:
+# The main script will search for a line that contains the keyword 'cable' or 'network' followed by a "valid" IP address (No letters, max of 3 digits per number etc.). So please make sure that the requirement is not fullfied any earlier by accident. Lines starting with '#' will be ignored.
+
+# You can use the measure.sh script by inserting the IP address manually, but you can also set these two 'shortcuts' and then use host-cable or host-network instead of inputting the IP-address each time (or both-cable / both-network).
+
+
+# When directly connected to the Raspberry Pi by LAN cable, use this IP address
+IP address (cable): 10.42.0.82
+
+# When connected to the Raspberry Pi via WLAN (through the router), use this IP address
+IP address (network): 192.168.1.5
