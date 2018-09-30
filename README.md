@@ -1,4 +1,4 @@
-# Researching measurement on ARM
+# Researching eneryg consumption on ARM
 
 ## Prerequisites
 
