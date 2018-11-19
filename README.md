@@ -1,4 +1,4 @@
-# Researching measurement on ARM
+# Researching eneryg consumption on ARM
 
 ## Prerequisites
 
@@ -25,6 +25,8 @@ If not there, then almost none of the SSH commands will work.
 ### Patus folder name
 
 By default the PATUS folder name is *patus*. This can be changed at the very beginning of the script (*patus_folder* variable). The folder name is used for local and host, so they need to be same on both machines.
+
+The results of the measurements go into a folder called *patus_results*. This can also be changed at the beginning of the script (*results_folder* variable).
 
 
 ### Using the Measurement Device
@@ -128,7 +130,9 @@ Try to follow these guidelines:
 * There is no check for the dimensions of stencil codes. Make sure beforehand that you use valid dimensions (e.g. multiple of 4 for blur etc.).
 
 
-### SSH Connection Check
+### SSH Connection & Check
+
+To do the measurements on the ARM many SSH commands are used. I set up a passwordless system to connect to the Pi. I can't guarantee for a working behaviour if that is not the case, as I have never tried my scripts without having a passwordless ssh set up to connect to the Pi.
 
 There is a check of whether or not a SSH Connection to the Raspberry Pi can be established or not.
 
