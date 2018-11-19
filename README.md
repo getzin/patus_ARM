@@ -1,4 +1,4 @@
-# Researching eneryg consumption on ARM
+# Researching energy consumption on ARM
 
 ## Prerequisites
 
@@ -71,42 +71,42 @@ The scripts can be used in a few different ways:
 
 Single measurement of performance on **Intel** using blur-float stencil specification with dimensions 2048x2048
 ```
-./measure.sh **local** blur-float 2048 2048
+./measure.sh local blur-float 2048 2048
 ```
 ... on **ARM** 
 ```
-./measure.sh **host** *IP-Address* blur-float 2048 2048
+./measure.sh host <IP-Address> blur-float 2048 2048
 ```
 *IP-Address has to be the IP-Address of the Raspberry Pi (See below for a shortcut)*
 ... or both (ARM is first)
 ```
-./measure.sh **both** *IP-Address* blur-float 2048 2048
+./measure.sh both <IP-Address> blur-float 2048 2048
 ```
 
 
 **10x** measurement of performance on Intel using wave-1-float stencil specification with dimensions 128x128x128
 ```
-./measure.sh **multiple 10** local wave-1-float 128 128 128
+./measure.sh multiple 10 local wave-1-float 128 128 128
 ```
 ... on ARM  
 ```
-./measure.sh **multiple 10** host *IP-Address* wave-1-float 128 128 128
+./measure.sh multiple 10 host <IP-Address> wave-1-float 128 128 128
 ```
 ... or both
 ```
-./measure.sh **multiple 10** both *IP-Address* wave-1-float 128 128 128
+./measure.sh multiple 10 both <IP-Address> wave-1-float 128 128 128
 ```
 
 
 Measurement of performance & **energy consumption** on Intel using laplacian-float stencil specification with dimensions 258x258x258 *(NO THREAD ADJUSTMENT)*
 ```
-./measure.sh **+measure** host *IP-Address* laplacian-float 258 258 258
+./measure.sh +measure host <IP-Address> laplacian-float 258 258 258
 ```
 
 
 Measurement of performance & **energy consumption** on Intel using gradient-float stencil specification with dimensions 130x130x130 *(THREAD ADJUSTMENT! Here up to 8 threads in the example)*
 ```
-./measure.sh **+measure 8** host *IP-Address* gradient-float 130 130 130
+./measure.sh +measure 8 host <IP-Address> gradient-float 130 130 130
 ```
 
 
